@@ -1,0 +1,9 @@
+[Unit]
+Description=dev.sz-coder.node-keywatcher-server
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /usr/local/bin/dev.sz-coder.node-keywatcher-server
+
+[Install]
+WantedBy=multi-user.target
