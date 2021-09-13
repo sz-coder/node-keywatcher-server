@@ -1,5 +1,15 @@
 #!/bin/bash -euf
 
+if [ ! -f "/usr/bin/node" ]; then
+	printf "/usr/bin/node not available. Please install nodejs.\n" >&2
+	exit 1
+fi
+
+if [ ! -f "/usr/bin/curl" ]; then
+	printf "/usr/bin/curl not available. Please install curl.\n" >&2
+	exit 1
+fi
+
 ./uninstall-daemon.sh &> /dev/null
 
 source ./vars.sh
